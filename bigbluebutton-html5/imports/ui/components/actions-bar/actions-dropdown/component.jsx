@@ -8,6 +8,7 @@ import { withModalMounter } from '/imports/ui/components/modal/service';
 import withShortcutHelper from '/imports/ui/components/shortcut-help/service';
 import ExternalVideoModal from '/imports/ui/components/external-video-player/modal/container';
 import RandomUserSelectContainer from '/imports/ui/components/modal/random-user/container';
+import BroadcastVideo from '/imports/ui/components/modal/broadcast-video/component';
 import cx from 'classnames';
 import { styles } from '../styles';
 import { PANELS, ACTIONS } from '../../layout/enums';
@@ -209,6 +210,14 @@ class ActionsDropdown extends PureComponent {
           />
         )
         : null),
+        (amIPresenter ? (
+          <Dropdown.DropdownList
+            icon = "video"
+            label={"Broadcast video"}
+            description={"click to broadcast the video"}
+            onClick = {() => mountModal(<BroadcastVideo />)}
+          />
+        ) : null)
     ]);
   }
 
