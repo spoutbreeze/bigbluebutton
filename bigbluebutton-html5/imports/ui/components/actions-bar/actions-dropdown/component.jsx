@@ -93,7 +93,7 @@ class ActionsDropdown extends PureComponent {
     this.pollId = _.uniqueId('action-item-');
     this.takePresenterId = _.uniqueId('action-item-');
     this.selectUserRandId = _.uniqueId('action-item-');
-
+    this.broadcastVideo = _.uniqueId('action-item-');
     this.handleExternalVideoClick = this.handleExternalVideoClick.bind(this);
     this.makePresentationItems = this.makePresentationItems.bind(this);
   }
@@ -215,6 +215,7 @@ class ActionsDropdown extends PureComponent {
             icon = "video"
             label={"Broadcast video"}
             description={"click to broadcast the video"}
+            key={this.broadcastVideo}
             onClick = {() => mountModal(<BroadcastVideo />)}
           />
         ) : null)
