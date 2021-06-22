@@ -211,7 +211,7 @@ class ActionsDropdown extends PureComponent {
         )
         : null),
         (amIPresenter ? (
-          <Dropdown.DropdownList
+          <Dropdown.DropdownListItem
             icon = "video"
             label={"Broadcast video"}
             description={"click to broadcast the video"}
